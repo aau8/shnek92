@@ -15,6 +15,11 @@
     white-space: nowrap;
     user-select: none;
 
+	&.is-accent {
+		background: $accent;
+		color: $light;
+	}
+
 	&.is-grad {
 		--color: #{$light};
 		background: linear-gradient(180deg, #1DC1F5 0%, #2183F6 100%);

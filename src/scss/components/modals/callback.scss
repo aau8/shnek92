@@ -1,0 +1,15 @@
+.m-callback__header {
+	display: flex;
+
+	& .modal-close {
+		margin-left: auto;
+	}
+}
+
+.m-callback__body {
+	margin-top: 16px;
+}
+
+.m-callback__textarea {
+	min-height: 168px;
+}

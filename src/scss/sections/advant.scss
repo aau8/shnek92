@@ -25,9 +25,10 @@
 }
 
 .s-advant__list {
-	list-style-type: none;
-	counter-reset: advantCards;
+	width: 100%;
 	display: flex;
+	counter-reset: advantCards;
+	list-style-type: none;
 
 	margin: 0 -16px;
 

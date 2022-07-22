@@ -40,40 +40,82 @@
     transform: translate(0, 0);
     // transform: translate(0, 100vh);
     // transition: $tr;
+
+	@media (max-width: $mobile-l) {
+		padding: 0;
+	}
 }
 
 .modal__window {
     position: relative;
-    max-width: 615px;
+    max-width: 490px;
     width: 100%;
     transform: translate(0, 100vh);
     background: #fff;
-    padding: 24px;
+	border-radius: $radius-m;
+    padding: 32px;
     transition: $tr;
+
+	@media (max-width: $mobile-l) {
+		border-radius: 0;
+		padding: 24px;
+	}
 }
 
 .modal-close {
 	display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
     width: 24px;
     height: 24px;
     transition: $tr;
 
-    // @media (any-hover: hover) {
+	& span {
+		background: $text-label;
+	}
+}
 
-    //     &:hover {
-    //         transform: scale(1.1);
-    //     }
-    // }
+// Форма
+.modal__title {
+	font-size: 36px;
+	font-weight: 900;
+	font-style: italic;
+	line-height: 1.2;
 
-    // &:active {
+	@media (max-width: $tablet) {
+		font-size: 32px;
+	}
 
-    //     @media (any-hover: hover) {
-    //         transform: scale(1);
-    //     }
+	@media (max-width: $mobile-l) {
+		font-size: 28px;
+	}
+}
 
-    //     transform: scale(.9);
-    // }
+.modal__text {
+	color: $text-label;
+	margin: 16px 0 32px;
+}
+
+.modal__form {
+	margin-top: 32px;
+}
+
+.modal__form-wrap {
+
+	& .tf {
+		height: 56px;
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	& .tf__field {
+	}
+}
+
+.modal__form-btn {
+	width: 100%;
+	margin-top: 24px;
 }

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.min.css?_v=20220722201338">
+    <link rel="stylesheet" href="./css/style.min.css?_v=20220722204620">
 </head>
 <body>
 	<div class="wrapper">
@@ -282,6 +282,60 @@
         <div class="modal__bg"></div>
     </div>
 </div>
-    <script src="./js/bundle.min.js?_v=20220722201338"></script>
+
+<div class="modal m-callback" data-modal-id="callback" data-close-on-bg>
+    <div class="modal__wrap">
+        <div class="modal__window m-callback__window">
+			<div class="m-callback__header">
+				<button class="burger is-active modal-close" data-modal-close>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<div class="modal__body m-callback__body">
+				<h2 class="modal__title">Штукатурная станция Serta Master XL</h2>
+				<form action="#" class="modal__form">
+					<div class="modal__form-wrap">
+						<label class="tf">
+							<div class="tf__field">
+								<input type="text" name="user-">
+								<span class="tf__label">Имя</span>
+							</div>
+						</label>
+						<label class="tf">
+							<div class="tf__field">
+								<input type="text" name="user-">
+								<span class="tf__label">Телефон</span>
+							</div>
+						</label>
+						<label class="tf is-textarea m-callback__textarea">
+							<div class="tf__field">
+								<textarea name="user-"></textarea>
+								<span class="tf__label">Комментарий</span>
+							</div>
+						</label>
+					</div>
+					<button class="btn is-accent modal__form-btn">Отправить заявку</button>
+				</form>
+			</div>
+        </div>
+        <div class="modal__bg"></div>
+    </div>
+</div>
+
+<div class="modal m-success" data-modal-id="success" data-close-on-bg>
+    <div class="modal__wrap">
+        <div class="modal__window m-success__window">
+			<div class="modal__body m-success__body">
+				<h2 class="modal__title">Заказ отправлен</h2>
+				<p class="modal__text">Спасибо за заказ, в ближайшее время с вами свяжется менеджер для уточнения деталей</p>
+				<button class="btn is-accent modal__form-btn" data-modal-close>ПРОДОЛЖИТЬ ПОКУПКИ</button>
+			</div>
+        </div>
+        <div class="modal__bg"></div>
+    </div>
+</div>
+    <script src="./js/bundle.min.js?_v=20220722204620"></script>
 </body>
 </html>

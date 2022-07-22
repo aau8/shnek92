@@ -321,7 +321,7 @@ export class Modals {
     modalShow = null
     modalShowId = null
     keyEsc = true
-    useHash = false
+    useHash = true
     historyHash = !this.useHash ? false : false
     hash = null
 
