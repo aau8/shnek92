@@ -1,3 +1,7 @@
+.footer {
+	border-top: 1px solid $border-line;
+}
+
 // Верхняя часть меню
 .footer-up {
 	padding: 80px 0;
@@ -51,7 +55,7 @@
 .footer-block__body {
 	margin-top: 32px;
 
-	& > .footer-contact {
+	& > .b-contact {
 
 		&:not(:last-child) {
 			margin-bottom: 24px;

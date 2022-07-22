@@ -1,0 +1,48 @@
+.breadcrumbs {
+	// padding: 30px 0 24px 0;
+	// margin-bottom: 24px;
+	overflow: auto;
+
+	@include scrollbar(100%, 4px);
+
+	@media (max-width: $laptop) {
+		margin-bottom: 12px;
+	}
+
+	@media (max-width: $mobile-l) {
+		padding: 15px 0 12px 0;
+		margin-bottom: 12px;
+	}
+}
+
+.breadcrumbs__container {
+}
+
+.breadcrumbs__list {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs__item {
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+	color: $text-label;
+	white-space: nowrap;
+
+	&:not(:first-child) {
+
+		&::before {
+			content: '\\';
+			margin: 0 .4em;
+		}
+	}
+
+	&:last-child {
+		padding-right: var(--container-padding);
+	}
+
+	& a {
+		@include link;
+	}
+}

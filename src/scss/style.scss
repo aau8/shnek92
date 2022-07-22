@@ -43,7 +43,8 @@ $container-padding: 48;
 $container-width: $max-width-container + $container-padding;
 
 :root {
-	--container-padding: #{math.div($container-padding, 2) + 'px'};
+	--container-width: #{$container-width + px};
+	--container-padding: #{math.div($container-padding, 2) + px};
 }
 
 $laptop-l: 1500px;
@@ -91,7 +92,7 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    // overflow: hidden;
 
     & > .content {
         flex: 1 0 auto;
@@ -126,7 +127,9 @@ body {
 // Компоненты
 @import "./components/blocks/tel";
 @import "./components/blocks/search";
-@import "./components/blocks/footer-contact";
+@import "./components/blocks/contact";
+@import "./components/breadcrumbs";
+@import "./components/page-header";
 
 // Карточки
 @import "./components/cards/main-cats";
@@ -134,11 +137,12 @@ body {
 @import "./components/cards/advant";
 
 // Модальные окна
-// @import "./components/modals/";
+@import "./components/modals/search";
 
 // Секции
 @import "./sections/header/header";
 @import "./sections/main";
+@import "./sections/content";
 @import "./sections/top-sales";
 @import "./sections/advant";
 @import "./sections/manuf";
@@ -146,4 +150,4 @@ body {
 @import "./sections/footer";
 
 // Стили для отдельных страниц
-// @import "./pages/";
+@import "./pages/contacts";

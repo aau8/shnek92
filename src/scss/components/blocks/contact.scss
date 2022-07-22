@@ -1,9 +1,9 @@
-.footer-contact {
+.b-contact {
 	display: flex;
 	align-items: center;
 }
 
-.footer-contact__icon {
+.b-contact__icon {
 	@include strictSize(24px);
 	margin-right: 24px;
 
@@ -11,8 +11,8 @@
 		fill: $text-primary;
 	}
 }
-
-.footer-contact__text {
+ 
+.b-contact__text {
 	font-size: 16px;
 	white-space: nowrap;
 
@@ -26,7 +26,7 @@
 	}
 }
 
-a.footer-contact__text {
+a.b-contact__text {
 	@include link;
 
 	@media (any-hover: hover) {

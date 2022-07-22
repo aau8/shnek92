@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,.9);
+    background: rgba(0,0,0,.2);
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
@@ -16,7 +16,7 @@
         opacity: 1;
         overflow-y: auto;
 
-        & .modal__wrap {
+        & .modal__window {
             transform: translate(0, 0);
         }
     }
@@ -33,43 +33,47 @@
 
 .modal__wrap {
     min-height: 100%;
-    transform: translate(0, 100vh);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 16px;
-    transition: $tr;
+    transform: translate(0, 0);
+    // transform: translate(0, 100vh);
+    // transition: $tr;
 }
 
 .modal__window {
     position: relative;
     max-width: 615px;
     width: 100%;
+    transform: translate(0, 100vh);
     background: #fff;
     padding: 24px;
+    transition: $tr;
 }
 
 .modal-close {
+	display: block;
     position: absolute;
     top: 0;
     right: 0;
-    width: 36px;
-    height: 36px;
+    width: 24px;
+    height: 24px;
     transition: $tr;
 
-    @media (any-hover: hover) {
-        
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
+    // @media (any-hover: hover) {
 
-    &:active {
+    //     &:hover {
+    //         transform: scale(1.1);
+    //     }
+    // }
 
-        @media (any-hover: hover) {
-            transform: scale(1);
-        }
+    // &:active {
 
-        transform: scale(.9);
-    }
+    //     @media (any-hover: hover) {
+    //         transform: scale(1);
+    //     }
+
+    //     transform: scale(.9);
+    // }
 }

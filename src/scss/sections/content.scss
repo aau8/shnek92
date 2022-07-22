@@ -1,0 +1,64 @@
+.content {
+
+	&.has-sidebar {
+		margin-bottom: 80px;
+
+		@media (max-width: $mobile-l) {
+			margin-bottom: 64px;
+		}
+	}
+}
+
+.content__wrap {
+
+}
+
+.content__container {
+	display: flex;
+
+}
+
+.content__body {
+	max-width: 910px;
+	width: 100%;
+	margin-right: 100px;
+
+	@include resVal(margin-right, 36, 100, 900, $container-width);
+
+	@media (max-width: 900px) {
+		margin-right: 0;
+	}
+}
+
+// Навигация
+.content-nav {
+	position: sticky;
+	top: 24px;
+	width: 270px;
+	height: 100%;
+
+	@media (max-width: 900px) {
+		display: none;
+	}
+}
+
+.content-nav__list {
+
+	& li {
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+
+		& a {
+			@include link;
+			--color: #{$text-label};
+			display: inline-block;
+			padding: 4px 0;
+		}
+
+		& .is-current {
+			color: $text-primary
+		}
+	}
+}

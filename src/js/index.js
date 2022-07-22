@@ -1,4 +1,4 @@
-import { removeAllClasses, bodyLock } from "./utils/functions.js"
+import { removeAllClasses, bodyLock, bodyUnlock } from "./utils/functions.js"
 import DismalModules, { acc } from "./utils/modules.js"
 
 import './render.js'
@@ -7,7 +7,7 @@ import './render.js'
 const accordions = new DismalModules.Accordions()
 
 // Модальные окна
-// const modals = new DismalModules.Modals()
+const modals = new DismalModules.Modals()
 
 // Табы
 // DismalModules.tabs()
@@ -26,6 +26,66 @@ DismalModules.labelTextfield()
 
 // Только цифры и точка в инпутах
 // DismalModules.onlyDigit()
+
+// Увеличение изображения при клике по нему. У изображения должен быть атрибут data-zoom
+zoomInImg()
+function zoomInImg() {
+    const TR = 300
+    const zoomInImgElems = document.querySelectorAll("[data-zoom], .text img")
+
+    for (let i = 0; i < zoomInImgElems.length; i++) {
+        const zoomInImg = zoomInImgElems[i]
+
+        zoomInImg.style.cursor = "zoom-in"
+    }
+
+    window.addEventListener('click', e => {
+        const target = e.target
+
+        if (target.getAttribute('data-zoom') != null || target.closest('.text') && target.tagName === 'IMG') {
+            const imgSrc = target.getAttribute("src")
+            const bigImg = document.createElement("div")
+
+            bigImg.classList.add("big-img")
+            bigImg.style.cursor = "zoom-out"
+            bigImg.style.setProperty('--zoom-img-transition', TR + 'ms')
+
+            bigImg.innerHTML = `<div class="big-img__body"><img src="${imgSrc}" alt="" data-zoom-out></div>`
+
+            document.querySelector(".wrapper").append(bigImg)
+
+            setTimeout(() => {
+                bigImg.classList.add("_show")
+            }, 1)
+
+			bodyLock()
+        }
+
+        if (target.getAttribute('data-zoom-out') != null) {
+            const bigImg = target.closest('.big-img')
+
+            bigImg.classList.remove("_show")
+			bodyUnlock()
+
+            setTimeout(() => {
+                bigImg.remove()
+            }, TR)
+        }
+    })
+
+    // Закрыть увеличенное изображение
+    const zoomOutImgElems = document.querySelectorAll("[data-zoom-out]")
+
+    zoomOutImgElems.forEach((zoomOutImg) => {
+        zoomOutImg.addEventListener("click", () => {
+        })
+    })
+    // zoomInImgElems.forEach((zoomInImg) => {
+
+    //     zoomInImg.addEventListener("click", () => {
+    //     })
+    // })
+}
 
 import './DismalMenuItems.js'
 

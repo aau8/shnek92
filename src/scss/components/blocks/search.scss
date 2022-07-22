@@ -42,7 +42,10 @@
 	// }
 
 	&:active {
-		background: $accent;
+
+		&::before {
+			background: $accent;
+		}
 	}
 
 	@media (any-hover: hover) {
@@ -55,7 +58,10 @@
 		}
 
 		&:active {
-			background: brig-color($accent, active);
+
+			&::before {
+				background: brig-color($accent, active);
+			}
 		}
 	}
 }

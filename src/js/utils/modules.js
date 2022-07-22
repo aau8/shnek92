@@ -314,14 +314,14 @@ export class Modals {
         modalShow: 'is-show',
         modalBg: 'modal__bg',
     }
-    modalList = document.querySelectorAll(`[${this.attrs.modalId}]`)
+    modalList = Array.from(document.querySelectorAll(`[${this.attrs.modalId}]`))
     openingBtnList = document.querySelectorAll(`[${this.attrs.btnModalOpen}]`)
 	openBtn = null
     modalIsShow = false
     modalShow = null
     modalShowId = null
     keyEsc = true
-    useHash = true
+    useHash = false
     historyHash = !this.useHash ? false : false
     hash = null
 
@@ -370,7 +370,7 @@ export class Modals {
 
 		// Событие закрытия модалки
 		const _eModalOpenClose = new Event('modal-close')
-		_eModalOpenStart.data = { ...this }
+		_eModalOpenClose.data = { ...this }
 
 		modal.dispatchEvent( _eModalOpenClose )
 
@@ -403,8 +403,8 @@ export class Modals {
 
     // Обновить список модальных окон
     updateModalList() {
-        this.modalList = document.querySelectorAll(`[${this.attrs.modalId}]`)
-    }
+        this.modalList = Array.from(document.querySelectorAll(`[${this.attrs.modalId}]`))
+	}
 
     // Обновить список кнопок, открывающих модальные окна
     updateOpeningBtnList() {

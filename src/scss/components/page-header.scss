@@ -1,0 +1,36 @@
+.page-header {
+	margin: 40px 0 32px;
+
+	@media (max-width: $tablet) {
+		margin: 16px 0;
+	}
+
+	@media (max-width: $mobile-l) {
+		margin-top: 0;
+	}
+}
+
+.page-header__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 8px;
+}
+
+.page-header__content {
+
+}
+
+.page-header__title {
+	font-size: 36px;
+	font-weight: 900;
+	font-style: italic;
+
+	@media (max-width: $tablet) {
+		font-size: 32px;
+	}
+
+	@media (max-width: $mobile-l) {
+		font-size: 26px;
+	}
+}

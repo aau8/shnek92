@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+        @@include('tpls/header.html',{})
+
+		<div class="content has-sidebar">
+			<div class="page-header">
+				<div class="breadcrumbs">
+					<div class="breadcrumbs__container">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
+							<li class="breadcrumbs__item">Поиск</li>
+						</ul>
+					</div>
+				</div>
+				<div class="page-header__container">
+					<div class="page-header__content">
+						<h1 class="page-header__title">Контакты</h1>
+					</div>
+				</div>
+			</div>
+			<div class="content__wrap">
+				<div class="content__container">
+					<div class="content__body">
+						<div class="contacts">
+							<div class="contacts__list">
+								<div class="b-contact">
+									<div class="b-contact__icon"><svg><use href='./img/sprite.svg#phone-sym'></use></svg></div>
+									<a href="tel:+79675552122" class="b-contact__text is-bold">+7 (967) 555 21 22</a>
+								</div>
+								<div class="b-contact">
+									<div class="b-contact__icon"><svg><use href='./img/sprite.svg#email-sym'></use></svg></div>
+									<a href="mailto:info@plaster-solutions.ru" class="b-contact__text">info@plaster-solutions.ru</a>
+								</div>
+								<div class="b-contact">
+									<div class="b-contact__icon"><svg><use href='./img/sprite.svg#location-sym'></use></svg></div>
+									<span class="b-contact__text">Краснодар, ул.&nbsp;Сормовская,&nbsp;4</span>
+								</div>
+								<div class="b-contact">
+									<div class="b-contact__icon"><svg><use href='./img/sprite.svg#time-sym'></use></svg></div>
+									<span class="b-contact__text">Ежедневно с 9:00 до 18:00</span>
+								</div>
+							</div>
+
+							<div class="contacts__map">
+								<iframe src="https://yandex.ru/map-widget/v1/-/CCWgV694" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
+							</div>
+						</div>
+					</div>
+					<aside class="content-nav">
+						<nav class="content-nav__wrap">
+							<ul class="content-nav__list">
+								<li><a href="#">О компании</a></li>
+								<li><a href="#">Доставка</a></li>
+								<li><a href="#">Оплата</a></li>
+								<li><a href="#">Возврат и обмен</a></li>
+								<li><a href="#">Гарантия</a></li>
+								<li><a href="#">Производители</a></li>
+								<li><span class="is-current">Контакты</span></li>
+							</ul>
+						</nav>
+					</aside>
+				</div>
+			</div>
+		</div>
+
+        @@include('tpls/footer.html',{})
+	</div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/bundle.min.js"></script>
+</body>
+</html>

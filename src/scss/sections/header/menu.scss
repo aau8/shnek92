@@ -177,6 +177,7 @@
 // Блок с невлезшими элементами в меню
 .menu-more {
 	position: absolute;
+	z-index: 2;
 	max-width: 300px;
 	width: max-content;
 	background: $light;
