@@ -1,0 +1,53 @@
+.b-tel {
+	display: flex;
+
+}
+
+.b-tel__icon {
+	--size: 24px;
+
+	min-width: var(--size);
+	width: var(--size);
+	height: var(--size);
+	margin-right: 16px;
+
+	& svg {
+		fill: #E8952D;
+	}
+}
+
+.b-tel__content {
+	display: flex;
+	flex-direction: column;
+}
+
+.b-tel__text {
+	font-size: 18px;
+	font-weight: 900;
+	font-style: italic;
+	line-height: 1;
+	transition: $tr;
+
+	&:active {
+		opacity: .8;
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			opacity: .9;
+		}
+
+		&:active {
+			opacity: 1;
+		}
+	}
+}
+
+.b-tel__work-time {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 400;
+	color: $text-label;
+	margin-top: 2px;
+}

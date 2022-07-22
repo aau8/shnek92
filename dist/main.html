@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.min.css?_v=20220722172755">
+</head>
+<body>
+	<div class="wrapper">
+        <header class="header">
+    <div class="header-up">
+		<div class="header-up__container" >
+			<nav class="menu">
+				<div class="menu__wrap">
+					<div class="menu__catalog" data-acc-container>
+						<div class="acc" data-acc>
+							<button class="acc__toggler" data-acc-toggler>
+								<span class="acc__toggler-title">Каталог товаров</span>
+								<span class="acc__toggler-icon"></span>
+							</button>
+							<div class="acc__body" data-acc-body>
+								<div class="acc__content">
+									<ul class="header-catalog__list">
+										<li class="header-catalog__item"><a href="#">Шнековые пары-героторный насос</a></li>
+										<li class="header-catalog__item"><a href="#">Запчасти воздушной системы</a></li>
+										<li class="header-catalog__item"><a href="#">Запчасти для водной системы</a></li>
+										<li class="header-catalog__item"><a href="#">Смесители-Очестители</a></li>
+										<li class="header-catalog__item"><a href="#">Соединения и переходники для штукатурных станций</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="menu__list-area">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="#">О компании</a></li>
+							<li class="menu__item"><a href="#">Доставка</a></li>
+							<li class="menu__item"><a href="#">Оплата</a></li>
+							<li class="menu__item"><a href="#">Возврат и обмен</a></li>
+							<li class="menu__item"><a href="#">Гарантия</a></li>
+							<li class="menu__item"><a href="#">Производители</a></li>
+							<li class="menu__item"><a href="#">Контакты</a></li>
+						</ul>
+						<button class="menu__list-more is-hide"></button>
+					</div>
+					<button class="burger is-active menu__close" data-menu-close><span></span><span></span><span></span></button>
+				</div>
+			</nav>
+			<div class="b-tel header-up__b-tel">
+				<div class="b-tel__icon"><svg><use href='./img/sprite.svg#phone-sym'></use></svg></div>
+				<div class="b-tel__content">
+					<a href="tel:+79675552122" class="b-tel__text">+7 (967) 555 21 22</a>
+					<span class="b-tel__work-time">Пн-Сб / 9:00-19:00</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-down">
+		<div class="header-down__container">
+			<button class="burger header-down__burger" data-menu-open><span></span><span></span><span></span></button>
+			<a href="#" class="logo header-down__logo">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 209 81">
+					<path fill="#1C2022" d="M84.11 4.67h5.76L87 21.93h5.33l2.85-17.26h5.71l-2.85 17.26h5.2l2.85-17.26h5.71L108.2 26.5h-27.7l3.62-21.82Zm28.93 21.82 3.62-21.82h5.93l-1.41 8.53h7.84l1.4-8.53h5.93l-3.62 21.82h-5.92l1.4-8.52h-7.84l-1.4 8.52h-5.93Zm23.1 0 3.62-21.82h15.73l-.81 4.78h-9.8l-.6 3.75h9l-.82 4.77h-8.99l-.6 3.75h9.76l-.8 4.77h-15.69Zm32.7 0-5.21-8.82h-.83l-1.47 8.82h-5.93l3.63-21.82h5.92l-1.36 8.23h.76l7.63-8.23h7.46L169.4 15.16l6.88 11.33h-7.43Zm-67.2 16.37h-5.91c.04-.5.01-.96-.09-1.37-.1-.4-.27-.75-.51-1.04-.24-.3-.56-.53-.95-.68a5.08 5.08 0 0 0-4.18.54 6 6 0 0 0-2.03 2.2c-.54.96-.92 2.1-1.15 3.41a8.86 8.86 0 0 0-.02 3.19c.19.84.56 1.48 1.12 1.9.56.42 1.29.62 2.18.62.6 0 1.14-.07 1.64-.2.5-.15.95-.35 1.34-.62a4.2 4.2 0 0 0 1.67-2.2h5.96c-.23.92-.63 1.87-1.21 2.83a11.42 11.42 0 0 1-5.52 4.6c-1.25.5-2.66.75-4.22.75-2.05 0-3.81-.45-5.3-1.34a7.68 7.68 0 0 1-3.21-3.92c-.66-1.72-.8-3.82-.4-6.29.4-2.38 1.19-4.38 2.36-6a11.44 11.44 0 0 1 4.27-3.64 12.05 12.05 0 0 1 5.35-1.22c1.43 0 2.7.18 3.83.56 1.14.38 2.1.93 2.87 1.65.78.72 1.36 1.6 1.72 2.65.37 1.06.5 2.26.4 3.62Zm1.06 13.63 3.62-21.82h15.73l-.81 4.78h-9.8l-.6 3.75h8.99l-.81 4.77h-9l-.59 3.75h9.76l-.8 4.77h-15.7Zm19.26 0 3.62-21.82H135c1.62 0 2.98.32 4.1.96 1.1.64 1.9 1.54 2.38 2.7.48 1.16.6 2.5.34 4.06a8.69 8.69 0 0 1-5.05 6.71c-1.35.61-2.86.92-4.54.92h-5.62l.76-4.6h4.44c.7 0 1.33-.13 1.87-.37a3.35 3.35 0 0 0 1.96-2.66c.1-.63.05-1.16-.14-1.6-.18-.45-.5-.79-.96-1.02a3.6 3.6 0 0 0-1.71-.37h-2.09l-2.86 17.1h-5.92Zm20.29 0 3.62-21.82h9.46c1.66 0 3.02.23 4.08.68a4.35 4.35 0 0 1 2.26 1.9c.45.8.58 1.77.4 2.88-.15.8-.45 1.52-.92 2.18a6.25 6.25 0 0 1-1.76 1.66c-.7.45-1.49.76-2.35.93l-.05.21c.94.03 1.76.27 2.45.7.7.44 1.21 1.04 1.54 1.82.32.77.4 1.66.23 2.68a6.6 6.6 0 0 1-1.46 3.19 7.92 7.92 0 0 1-3.01 2.2c-1.24.53-2.65.8-4.22.8h-10.27Zm6.73-4.73h2.77a4.1 4.1 0 0 0 2.31-.56c.57-.38.9-.93 1.01-1.65.1-.51.05-.95-.12-1.3a1.7 1.7 0 0 0-.86-.81c-.41-.19-.92-.28-1.53-.28h-2.85l-.73 4.6Zm1.37-8.26h2.42c.52 0 .98-.09 1.41-.25.43-.16.78-.4 1.06-.71.27-.32.45-.7.52-1.13.1-.68-.06-1.2-.5-1.56-.42-.35-1-.53-1.72-.53h-2.51l-.69 4.18Zm16.16-8.83h5.92l-1.9 11.42h.18l9.65-11.42h5.03l-3.62 21.82h-5.93l1.9-11.46h-.13l-9.78 11.46h-4.94l3.62-21.82Zm41.26 8.19h-5.92c.04-.5.02-.96-.09-1.37-.1-.4-.26-.75-.5-1.04-.25-.3-.56-.53-.95-.68a5.07 5.07 0 0 0-4.18.54 6 6 0 0 0-2.03 2.2c-.54.96-.93 2.1-1.16 3.41a8.85 8.85 0 0 0-.02 3.19c.2.84.57 1.48 1.12 1.9.56.42 1.3.62 2.19.62.6 0 1.14-.07 1.64-.2.5-.15.95-.35 1.34-.62a4.22 4.22 0 0 0 1.66-2.2h5.97c-.23.92-.64 1.87-1.22 2.83a11.4 11.4 0 0 1-5.52 4.6c-1.25.5-2.65.75-4.22.75-2.04 0-3.8-.45-5.29-1.34a7.68 7.68 0 0 1-3.22-3.92c-.66-1.72-.79-3.82-.4-6.29.4-2.38 1.2-4.38 2.36-6a11.44 11.44 0 0 1 4.27-3.64 12.05 12.05 0 0 1 5.35-1.22c1.43 0 2.7.18 3.84.56 1.13.38 2.09.93 2.86 1.65.78.72 1.36 1.6 1.73 2.65.37 1.06.5 2.26.4 3.62Z"/>
+					<path fill="#E8952D" d="m56.64 35.47 1.65-5.09s5.31-1.23-12.27-12.2C28.62 7.33 28.45 7.4 28.45 7.4l1.5-4.63 9.22-.07-1.5 4.63s8.62 4.29 14.67 8.1C68.44 25.52 66.6 30 66.6 30l-1.2 3.7-8.75 1.76Z"/>
+					<path fill="#E8942C" d="m49.01 49.34 1.65-5.08s5.31-1.24-12.27-12.2c-17.4-10.86-17.57-10.8-17.57-10.79l1.5-4.62 9.22-.07-1.5 4.62s8.62 4.29 14.67 8.1C60.8 39.4 58.96 43.89 58.96 43.89l-1.2 3.7-8.75 1.75Z"/>
+					<path fill="#E8952D" d="m41.38 63.22 1.65-5.09s5.31-1.23-12.27-12.2c-17.4-10.85-17.57-10.79-17.57-10.79l1.5-4.62 9.22-.07-1.5 4.62s8.62 4.3 14.67 8.1c16.09 10.11 14.25 14.59 14.25 14.59l-1.2 3.7-8.75 1.76ZM33.75 77.09 35.4 72s5.31-1.23-12.27-12.2C5.73 48.95 5.56 49.01 5.56 49.02l1.5-4.63 9.22-.07-1.5 4.63s8.62 4.28 14.67 8.1C45.54 67.14 43.7 71.62 43.7 71.62l-1.2 3.7-8.75 1.76Z"/>
+					<path class="logo__domen" fill="#8D9ABC" d="M84.83 71.95a1.34 1.34 0 0 0-.62-1 2.39 2.39 0 0 0-1.34-.37c-.39 0-.73.07-1.02.2-.28.12-.5.29-.67.5a1.24 1.24 0 0 0-.07 1.35c.11.17.26.3.43.42.18.1.36.2.56.27l.53.16.89.24c.22.06.48.14.76.25.28.1.55.25.8.43a2 2 0 0 1 .9 1.73c0 .46-.13.9-.38 1.27-.24.38-.6.68-1.07.9-.47.23-1.04.35-1.71.35a4 4 0 0 1-1.63-.3 2.4 2.4 0 0 1-1.51-2.1h1.1c.02.32.13.6.32.81.2.21.45.37.75.48.3.1.62.15.97.15.4 0 .76-.06 1.08-.2.33-.13.58-.31.77-.55.18-.24.28-.52.28-.83 0-.3-.08-.53-.24-.71a1.78 1.78 0 0 0-.64-.44 6.73 6.73 0 0 0-.86-.3l-1.07-.3a4 4 0 0 1-1.62-.85c-.4-.36-.6-.84-.6-1.43 0-.49.13-.91.4-1.27.26-.37.62-.66 1.07-.86.45-.2.96-.3 1.51-.3.57 0 1.07.1 1.5.3.44.2.79.47 1.04.82.26.34.4.74.41 1.18h-1.02Zm4.02 6.54v-8.72h1.06v3.88h4.65v-3.88h1.06v8.72h-1.06v-3.9H89.9v3.9h-1.06Zm16.94-8.72v8.72h-1.02L100 71.64h-.08v6.85h-1.06v-8.72h1.02l4.78 6.86h.08v-6.86h1.04Zm3.26 8.72v-8.72h5.26v.93h-4.2v2.95h3.93v.94h-3.94v2.97h4.28v.93h-5.33Zm8.3 0v-8.72h1.07v4.32h.1l3.92-4.32h1.38l-3.67 3.93 3.67 4.8h-1.28l-3.03-4.06-1.1 1.22v2.83h-1.05Zm13.75-6.54a1.34 1.34 0 0 0-.62-1c-.37-.25-.81-.37-1.34-.37-.39 0-.72.07-1.01.2-.3.12-.52.29-.68.5a1.24 1.24 0 0 0-.07 1.35c.11.17.26.3.43.42.18.1.37.2.56.27l.53.16.89.24c.22.06.48.14.76.25.28.1.54.25.8.43s.47.4.64.69c.17.28.25.62.25 1.03 0 .47-.12.9-.37 1.28-.24.38-.6.68-1.07.9-.47.23-1.04.35-1.71.35a4 4 0 0 1-1.63-.3 2.4 2.4 0 0 1-1.51-2.1h1.1c.02.32.13.6.33.81.2.21.44.37.74.48.3.1.62.15.97.15.4 0 .76-.06 1.09-.2.32-.13.57-.31.76-.55.19-.24.28-.52.28-.83 0-.3-.08-.53-.24-.71a1.79 1.79 0 0 0-.64-.44 6.72 6.72 0 0 0-.86-.3l-1.07-.3a4 4 0 0 1-1.62-.85c-.4-.36-.6-.84-.6-1.43 0-.49.13-.91.4-1.27.26-.37.62-.66 1.07-.86.45-.2.96-.3 1.51-.3.57 0 1.07.1 1.5.3.44.2.79.47 1.04.82.26.34.4.74.41 1.18h-1.02Zm4.02 6.54v-8.72h5.27v.93h-4.21v2.95h3.93v.94h-3.93v2.97h4.27v.93h-5.33Zm8.31 0v-8.72h2.95c.68 0 1.24.11 1.68.34.44.23.76.55.97.96.21.4.32.86.32 1.37 0 .52-.1.97-.32 1.37-.21.4-.53.71-.97.94-.43.22-.99.33-1.66.33H144v-.95h2.35c.47 0 .84-.07 1.13-.2.28-.14.5-.34.62-.59.13-.25.2-.55.2-.9s-.07-.65-.2-.91a1.34 1.34 0 0 0-.63-.61 2.54 2.54 0 0 0-1.13-.22h-1.86v7.8h-1.06Zm4.1-3.92 2.16 3.92h-1.23l-2.11-3.92h1.19Zm4.88-4.8L155 77.1h.1l2.59-7.34h1.1l-3.2 8.72h-1.09l-3.2-8.72h1.1Zm9.94 0v8.72h-1.05v-8.72h1.05Zm10.29 2.72h-1.06a2.21 2.21 0 0 0-.9-1.38 2.4 2.4 0 0 0-.72-.36 2.9 2.9 0 0 0-2.27.29c-.43.26-.77.66-1.02 1.18a4.4 4.4 0 0 0-.38 1.9c0 .76.13 1.4.38 1.92s.6.92 1.02 1.18c.43.27.9.4 1.43.4.3 0 .57-.04.84-.12a2.25 2.25 0 0 0 1.62-1.74h1.06c-.08.45-.23.85-.44 1.2a3.28 3.28 0 0 1-1.84 1.46 3.92 3.92 0 0 1-3.22-.35 3.75 3.75 0 0 1-1.37-1.55 5.32 5.32 0 0 1-.5-2.4c0-.91.17-1.7.5-2.38a3.66 3.66 0 0 1 3.35-2.1c.45 0 .86.07 1.24.2a3.4 3.4 0 0 1 1.84 1.46c.21.34.36.74.44 1.2Zm2.84 6v-8.72h5.27v.93h-4.21v2.95h3.94v.94h-3.94v2.97h4.28v.93h-5.34Zm8.91.07a.74.74 0 0 1-.54-.23.74.74 0 0 1-.22-.54c0-.2.07-.39.22-.54a.74.74 0 0 1 .54-.22c.21 0 .4.07.54.22.15.15.23.33.23.54 0 .14-.04.27-.1.39a.79.79 0 0 1-.28.28.73.73 0 0 1-.39.1Zm3.85-.07v-8.72h2.95c.68 0 1.24.11 1.68.34.44.23.76.55.97.96.21.4.31.86.31 1.37 0 .52-.1.97-.31 1.37-.21.4-.53.71-.97.94-.43.22-.99.33-1.66.33h-2.4v-.95h2.36c.47 0 .84-.07 1.13-.2.28-.14.5-.34.62-.59.13-.25.2-.55.2-.9s-.07-.65-.2-.91a1.34 1.34 0 0 0-.63-.61 2.53 2.53 0 0 0-1.13-.22h-1.86v7.8h-1.06Zm4.1-3.92 2.16 3.92h-1.23l-2.12-3.92h1.2Zm10.44-4.8h1.06v5.77a2.96 2.96 0 0 1-1.6 2.7c-.51.27-1.1.4-1.8.4a3.8 3.8 0 0 1-1.78-.4c-.51-.26-.9-.63-1.19-1.1-.28-.47-.41-1-.41-1.6v-5.77h1.05v5.69c0 .42.1.8.28 1.14.2.33.46.59.8.78.35.18.77.28 1.26.28.48 0 .9-.1 1.25-.28.35-.2.62-.45.8-.78.19-.34.28-.72.28-1.14v-5.7Z"/>
+				</svg>
+			</a>
+			<div class="header-catalog">
+				<button class="btn is-grad header-catalog__btn">
+					<div class="burger header-catalog__btn-icon"><span></span><span></span><span></span></div>
+					<span class="header-catalog__btn-text">Каталог товаров</span>
+				</button>
+				<div class="header-catalog__dropdown">
+					<ul class="header-catalog__list">
+						<li class="header-catalog__item"><a href="#">Шнековые пары-героторный насос</a></li>
+						<li class="header-catalog__item"><a href="#">Запчасти воздушной системы</a></li>
+						<li class="header-catalog__item"><a href="#">Запчасти для водной системы</a></li>
+						<li class="header-catalog__item"><a href="#">Смесители-Очестители</a></li>
+						<li class="header-catalog__item"><a href="#">Соединения и переходники для штукатурных станций</a></li>
+					</ul>
+				</div>
+			</div>
+			<form method="GET" class="search header-down__search">
+				<label class="tf search__tf">
+					<div class="tf__field search__tf-field">
+						<input type="text" name="search">
+						<span class="tf__label">Поиск по каталогу</span>
+					</div>
+				</label>
+				<button type="submit" class="btn has-icon is-search search__submit"></button>
+			</form>
+			<button class="btn has-icon is-search header-down__search-btn"></button>
+		</div>
+	</div>
+</header>
+
+		<main class="main">
+			<div class="main-services">
+				<div class="main-services__container">
+					<div class="main-services__body">
+						<div class="ms-block ms-slider">
+							<div class="ms-slider__body" data-swiper="main-services">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide ms-slide">
+										<div class="ms-slide__img"><img src="./img/sliders/main/1.png" alt=""></div>
+										<div class="ms-slide__content">
+											<span class="ms-slide__title">Запчасти для штукатурных станций</span>
+											<p class="ms-slide__text">Шнековые пары-героторный насос</p>
+										</div>
+									</div>
+									<div class="swiper-slide ms-slide">
+										<div class="ms-slide__img"><img src="./img/sliders/main/1.png" alt=""></div>
+										<div class="ms-slide__content">
+											<span class="ms-slide__title">Запчасти</span>
+											<p class="ms-slide__text">Шнековые пары-героторный насос</p>
+										</div>
+									</div>
+									<div class="swiper-slide ms-slide">
+										<div class="ms-slide__img"><img src="./img/sliders/main/1.png" alt=""></div>
+										<div class="ms-slide__content">
+											<span class="ms-slide__title">Запчасти станций</span>
+											<p class="ms-slide__text">Шнековые  насос</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+								<div class="swiper__arrows ms-slider__arrows">
+									<button class="swiper-arrow ms-slider__arrow is-prev"></but>
+									<button class="swiper-arrow ms-slider__arrow is-next"></but>
+								</div>
+							</div>
+						</div>
+						<div class="ms-block ms-card is-light" style="background: linear-gradient(106.36deg, #00ACED -1.95%, #00CC45 107.45%);">
+							<div class="ms-card__wrap">
+								<div class="ms-card__icon"><svg><use href='./img/sprite.svg#repair-tool-sym'></use></svg></div>
+								<div class="ms-card__content">
+									<span class="ms-card__title">Продажа запчастей</span>
+									<p class="ms-card__text">Ко всем штукатурным станциям </p>
+								</div>
+							</div>
+						</div>
+						<div class="ms-block ms-card is-dark" style="background: #EADBC7;">
+							<div class="ms-card__wrap">
+								<div class="ms-card__icon"><svg><use href='./img/sprite.svg#stretcher-sym'></use></svg></div>
+								<div class="ms-card__content">
+									<span class="ms-card__title">Аренда оборудования</span>
+									<p class="ms-card__text">На выгодных условиях </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section main-cats is-scroll">
+				<div class="main-cats__container">
+					<div class="main-cats__body">
+						<a href="#" class="c-main-cats">
+							<div class="c-main-cats__wrap" style="background-image: url('./img/sliders/cats/1.jpg')">
+								<div class="c-main-cats__content">
+									<span class="c-main-cats__title">Шнековая пара, героторный насос</span>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="c-main-cats">
+							<div class="c-main-cats__wrap" style="background-image: url('./img/sliders/cats/2.jpg')">
+								<div class="c-main-cats__content">
+									<span class="c-main-cats__title">Запчасти воздушной системы</span>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="c-main-cats">
+							<div class="c-main-cats__wrap" style="background-image: url('./img/sliders/cats/3.jpg')">
+								<div class="c-main-cats__content">
+									<span class="c-main-cats__title">Запчасти для водной системы</span>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="c-main-cats">
+							<div class="c-main-cats__wrap" style="background-image: url('./img/sliders/cats/4.jpg')">
+								<div class="c-main-cats__content">
+									<span class="c-main-cats__title">Смеситель-Очистители</span>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="c-main-cats">
+							<div class="c-main-cats__wrap" style="background-image: url('./img/sliders/cats/5.jpg')">
+								<div class="c-main-cats__content">
+									<span class="c-main-cats__title">Элементы для чистки</span>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="c-main-cats">
+							<div class="c-main-cats__wrap" style="background-image: url('./img/sliders/cats/6.jpg')">
+								<div class="c-main-cats__content">
+									<span class="c-main-cats__title">Соединения и переходники для штукатурных станций</span>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<div class="content">
+			<section class="section is-fill top-sales">
+				<div class="top-sales__container">
+					<div class="s-header top-sales__header">
+						<div class="s-header__content">
+							<h2 class="s-header__title">Топ продаж</h2>
+						</div>
+						<div class="s-header__tools">
+							<a href="#" class="link is-bold has-icon s-header__link-more">Посмотреть все</a>
+						</div>
+					</div>
+					<div class="top-sales__body is-scroll">
+						<div class="c-top-sales__block">
+							<a href="#" class="c-top-sales">
+								<div class="c-top-sales__wrap">
+									<div class="c-top-sales__img"><img src="./img/products/1/1.png" alt=""></div>
+									<div class="c-top-sales__content">
+										<span class="c-top-sales__title">Штукатурная станция POWERMIX ALFA 380В</span>
+										<div class="c-top-sales__price">
+											<span class="c-top-sales__price-title">Цена</span>
+											<span class="c-top-sales__price-text">400 000 ₽</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="c-top-sales__block">
+							<a href="#" class="c-top-sales">
+								<div class="c-top-sales__wrap">
+									<div class="c-top-sales__img"><img src="./img/products/2.png" alt=""></div>
+									<div class="c-top-sales__content">
+										<span class="c-top-sales__title">Штукатурная станция POWERMIX ALFA 380В</span>
+										<div class="c-top-sales__price has-old-price">
+											<span class="c-top-sales__price-title">800 000 ₽</span>
+											<span class="c-top-sales__price-text">400 000 ₽</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="c-top-sales__block">
+							<a href="#" class="c-top-sales">
+								<div class="c-top-sales__wrap">
+									<div class="c-top-sales__img"><img src="./img/products/3.png" alt=""></div>
+									<div class="c-top-sales__content">
+										<span class="c-top-sales__title">Штукатурная станция POWERMIX ALFA 380В</span>
+										<div class="c-top-sales__price">
+											<span class="c-top-sales__price-title">Цена</span>
+											<span class="c-top-sales__price-text">400 000 ₽</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="c-top-sales__block">
+							<a href="#" class="c-top-sales">
+								<div class="c-top-sales__wrap">
+									<div class="c-top-sales__img"><img src="./img/products/4.png" alt=""></div>
+									<div class="c-top-sales__content">
+										<span class="c-top-sales__title">Штукатурная станция POWERMIX ALFA 380В</span>
+										<div class="c-top-sales__price">
+											<span class="c-top-sales__price-title">Цена</span>
+											<span class="c-top-sales__price-text">400 000 ₽</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section is-fill s-advant">
+				<div class="s-advant__container">
+					<div class="s-header s-advant__header">
+						<div class="s-header__content">
+							<h2 class="s-header__title">Наши преимущества</h2>
+						</div>
+					</div>
+					<div class="s-advant__body is-scroll">
+						<ol class="s-advant__list">
+							<li class="s-advant__text">Для наших клиентов мы предоставляем увеличенную гарантию</li>
+							<li class="s-advant__text">Отправляем станцию в любой город России по предоплате всего 15000 рублей</li>
+							<li class="s-advant__text">У нас гарантия безопасной сделки, оформляем все необходимые документы для этого</li>
+							<li class="s-advant__text">Лизинг, кредит, НДС. Можно взять оборудование в лизинг, кредит. Есть возможность приобретать станцию с НДС и без НДС</li>
+						</ol>
+					</div>
+				</div>
+			</section>
+			<section class="section s-manuf">
+				<div class="s-manuf__container">
+					<div class="s-header s-manuf__header">
+						<div class="s-header__content">
+							<h2 class="s-header__title">Производители</h2>
+						</div>
+						<div class="s-header__tools">
+							<div class="swiper__arrows s-manuf-slider__arrows">
+								<button class="swiper-arrow s-manuf-slider__arrow is-prev"></but>
+								<button class="swiper-arrow s-manuf-slider__arrow is-next"></but>
+							</div>
+						</div>
+					</div>
+					<div class="s-manuf__body">
+						<div class="s-manuf-slider" data-swiper="s-manuf">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide s-manuf-slider__slide"><img src="./img/companies/1.png" alt=""></div>
+								<div class="swiper-slide s-manuf-slider__slide"><img src="./img/companies/2.png" alt=""></div>
+								<div class="swiper-slide s-manuf-slider__slide"><img src="./img/companies/3.png" alt=""></div>
+								<div class="swiper-slide s-manuf-slider__slide"><img src="./img/companies/4.png" alt=""></div>
+								<div class="swiper-slide s-manuf-slider__slide"><img src="./img/companies/5.png" alt=""></div>
+								<div class="swiper-slide s-manuf-slider__slide"><img src="./img/companies/6.png" alt=""></div>
+								<div class="swiper-slide s-manuf-slider__slide"><img src="./img/companies/7.png" alt=""></div>
+								<div class="swiper-slide s-manuf-slider__slide"><img src="./img/companies/8.png" alt=""></div>
+								<div class="swiper-slide s-manuf-slider__slide"><img src="./img/companies/8.png" alt=""></div>
+								<div class="swiper-slide s-manuf-slider__slide"><img src="./img/companies/8.png" alt=""></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section page-content">
+				<div class="page-content__container">
+					<div class="page-content__body text">
+						<h1>Магазин профессионального оборудования</h1>
+						<p>Предлагаемый нами широкий ассортимент и <b>приемлемые</b> цены поразят даже самых взыскательных и экономных клиентов. У нас представлено более 100 наименований практичного и уникального оборудования для проведения штукатурных работ,  от ведущих мировых и отечественных фирм-производителей. Среди представленных нами товаров, вы обязательно найдете штукатурные станции, растворонасосы, установки для торкрета и все комплектующие и расходники к ним, а также профессиональный ручной инструмент для штукатурных работ.</p>
+						<p>Наша компания <a href="#">станет надежным</a> помощником и добросовестным поставщиком оборудования и техники для решения поставленных перед вами задач. Наши товары не бояться работы, в независимости от степени ее сложности. Мы работаем по всей России: от Калининграда до Хабаровска.</p>
+						<p>"Штукатурные решения"   осуществляют продажу товаров напрямую со складов производителей, что исключает лишние наценки на товар. Штукатурные решения - все по честному!</p>
+						<ul>
+							<li>item 1</li>
+							<li>item 2</li>
+							<li>item 3</li>
+							<li>item 4</li>
+						</ul>
+						<ol>
+							<li>item</li>
+							<li>item</li>
+							<li>item</li>
+						</ol>
+					</div>
+				</div>
+			</section>
+		</div>
+
+        <footer class="footer">
+    <div class="footer-up">
+		<div class="footer-up__container">
+			<div class="footer-up__body">
+				<div class="footer-block is-contacts">
+					<span class="footer-block__title">Контакты</span>
+					<div class="footer-block__body">
+						<div class="footer-contact">
+							<div class="footer-contact__icon"><svg><use href='./img/sprite.svg#phone-sym'></use></svg></div>
+							<a href="tel:+79675552122" class="footer-contact__text is-bold">+7 (967) 555 21 22</a>
+						</div>
+						<div class="footer-contact">
+							<div class="footer-contact__icon"><svg><use href='./img/sprite.svg#email-sym'></use></svg></div>
+							<a href="mailto:info@plaster-solutions.ru" class="footer-contact__text">info@plaster-solutions.ru</a>
+						</div>
+						<div class="footer-contact">
+							<div class="footer-contact__icon"><svg><use href='./img/sprite.svg#location-sym'></use></svg></div>
+							<span class="footer-contact__text">Краснодар, ул.&nbsp;Сормовская,&nbsp;4</span>
+						</div>
+						<div class="footer-contact">
+							<div class="footer-contact__icon"><svg><use href='./img/sprite.svg#time-sym'></use></svg></div>
+							<span class="footer-contact__text">Ежедневно с 9:00 до 18:00</span>
+						</div>
+					</div>
+				</div>
+				<div class="footer-block is-about">
+					<span class="footer-block__title">О нас</span>
+					<div class="footer-block__body">
+						<ul class="footer-block__list">
+							<li class="footer-block__item"><a href="#">О компании</a></li>
+							<li class="footer-block__item"><a href="#">Доставка</a></li>
+							<li class="footer-block__item"><a href="#">Оплата</a></li>
+							<li class="footer-block__item"><a href="#">Возврат и обмен</a></li>
+							<li class="footer-block__item"><a href="#">Гарантия</a></li>
+							<li class="footer-block__item"><a href="#">Производители</a></li>
+							<li class="footer-block__item"><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-block is-catalog">
+					<span class="footer-block__title">Каталог</span>
+					<div class="footer-block__body">
+						<ul class="footer-block__list">
+							<li class="footer-block__item"><a href="#">Шнековые пары-героторный насос</a></li>
+							<li class="footer-block__item"><a href="#">Запчасти воздушной системы</a></li>
+							<li class="footer-block__item"><a href="#">Запчасти для водной системы</a></li>
+							<li class="footer-block__item"><a href="#">Смеситель-Очистители</a></li>
+							<li class="footer-block__item"><a href="#">Элементы для чистки</a></li>
+							<li class="footer-block__item"><a href="#">Соединения и переходники для&nbsp;штукатурных станций</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-block is-socials">
+					<span class="footer-block__title">Соцсети</span>
+					<div class="footer-block__body">
+						<div class="footer-block__social-list">
+							<a href="#" class="link footer-block__social"><svg><use href='./img/sprite.svg#vk-sym'></use></svg></a>
+							<a href="#" class="link footer-block__social"><svg><use href='./img/sprite.svg#instagram-sym'></use></svg></a>
+							<a href="#" class="link footer-block__social"><svg><use href='./img/sprite.svg#telegram-sym'></use></svg></a>
+							<a href="#" class="link footer-block__social"><svg><use href='./img/sprite.svg#whatsapp-sym'></use></svg></a>
+							<a href="#" class="link footer-block__social"><svg><use href='./img/sprite.svg#youtube-sym'></use></svg></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-down">
+		<div class="footer-down__container">
+			<span class="footer-down__text">Интернет магазин © 2022</span>
+			<a href="#" class="link footer-down__text">Пользовательское соглашение</a>
+		</div>
+	</div>
+</footer>
+	</div>
+
+    <!-- <div class="modal" data-modal-id="modal" data-close-on-bg>
+    <div class="modal__wrap">
+        <div class="modal__window">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum adipisci deserunt atque quis! Iure autem aut impedit velit? Maxime non quo voluptate porro doloribus officia ea accusamus harum ab alias!</p>
+            <button class="burger is-active modal-close" data-modal-close>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="modal__bg"></div>
+    </div>
+</div> -->
+    <script src="./js/bundle.min.js?_v=20220722172755"></script>
+</body>
+</html>

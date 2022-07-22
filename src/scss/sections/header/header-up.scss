@@ -1,0 +1,45 @@
+.header-up {
+	padding: 24px 0;
+
+	@media (max-width: $tablet) {
+		border-bottom: 1px solid $border-line;
+		padding: 16px 0;
+	}
+}
+
+.header-up__container {
+	display: flex;
+	align-items: center;
+}
+
+.header-up__b-tel {
+	margin-left: auto;
+
+	@media (max-width: $tablet) {
+		width: 100%;
+
+		& .b-tel__content {
+			width: 100%;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		& .b-tel__icon {
+			--size: 18px;
+			margin-right: 8px;
+		}
+
+		& .b-tel__text {
+			font-size: 14px;
+			margin-right: 16px;
+		}
+	}
+
+	@media (max-width: $mobile-l) {
+
+		& .b-tel__text {
+			font-size: 12px;
+		}
+	}
+}

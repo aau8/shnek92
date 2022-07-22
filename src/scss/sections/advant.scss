@@ -1,0 +1,68 @@
+.s-advant {
+	margin-top: 0;
+
+	&.is-fill {
+		padding-top: 0;
+	}
+}
+
+.s-advant__container {
+
+	@media (max-width: $container-width + px) {
+		padding: 0;
+	}
+}
+
+.s-advant__header {
+
+	@media (max-width: $container-width + px) {
+		padding: 0 var(--container-padding);
+	}
+}
+
+.s-advant__body {
+
+}
+
+.s-advant__list {
+	list-style-type: none;
+	counter-reset: advantCards;
+	display: flex;
+
+	margin: 0 -16px;
+
+	& > * {
+		min-width: 280px;
+		margin: 0 16px;
+
+		@media (max-width: $container-width + px) {
+
+			&:first-child {
+				padding-left: var(--container-padding);
+			}
+
+			&:last-child {
+				padding-right: var(--container-padding);
+			}
+		}
+	}
+}
+
+.s-advant__text {
+
+	&::before {
+		content: '0'counter(advantCards);
+		counter-increment: advantCards;
+		display: block;
+		font-size: 36px;
+		font-weight: 900;
+		font-style: italic;
+		background: linear-gradient(180deg, #1DC1F5 0%, #2183F6 100%), #1C2022;
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		padding: 0 4px;
+		margin: 0 -4px;
+		margin-bottom: 8px;
+	}
+}

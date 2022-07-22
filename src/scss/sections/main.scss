@@ -1,0 +1,271 @@
+.main-services__container {
+
+	@media (max-width: $tablet) {
+		padding: 0;
+	}
+}
+
+.main-services__body {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+
+	& > * {
+
+		&.ms-slider {
+			grid-column: 1 / 3;
+			grid-row: 1 / 3
+		}
+	}
+
+	@media (max-width: $tablet) {
+		grid-template-columns: 1fr 1fr;
+		gap: 0;
+
+		& > * {
+
+			&.ms-slider {
+				grid-column: 1 / 3;
+				grid-row: 1 / 3
+			}
+		}
+	}
+}
+
+// Общие стили блоков
+.ms-block {
+	width: 100%;
+	height: 100%;
+	border-radius: $radius-m;
+
+	@media (max-width: $tablet) {
+		border-radius: 0;
+	}
+}
+
+// Слайдер
+.ms-slider {
+	--padding-hor: 40px;
+	--padding-ver: 32px;
+	position: relative;
+	overflow: hidden;
+
+	@media (max-width: $mobile-l) {
+		--padding-hor: 24px;
+		--padding-ver: 32px;
+	}
+}
+
+.ms-slider__body {
+	width: 100%;
+	height: 100%;
+}
+
+// Слайд
+.ms-slide {
+	display: flex;
+	background: #CCE7F6;
+	padding: var(--padding-ver) var(--padding-hor);
+
+	&.swiper-slide-prev {
+
+		& .ms-slide__img {
+			// transform: translateX(-300px);
+			opacity: 0;
+		}
+	}
+
+	&.swiper-slide-active {
+
+		& .ms-slide__img {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+
+	&.swiper-slide-next {
+
+		& .ms-slide__img {
+			// transform: translateX(300px);
+			opacity: 0;
+		}
+	}
+
+	@media (max-width: $tablet) {
+		flex-direction: column;
+	}
+}
+
+.ms-slide__img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	max-width: 80%;
+	width: auto;
+	height: 100%;
+	transition: .6s;
+	transform: translateX(0);
+
+	@media (max-width: $tablet) {
+		position: initial;
+		max-width: 400px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.ms-slide__content {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	margin-top: auto;
+
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #CCE7F6;
+		filter: blur(32px);
+	}
+}
+
+.ms-slide__title {
+	max-width: 500px;
+	font-size: 36px;
+	font-weight: 900;
+	font-style: italic;
+	line-height: 1.2;
+
+	@media (max-width: $tablet) {
+		font-size: 30px;
+	}
+
+	@media (max-width: $mobile-l) {
+		font-size: 24px;
+	}
+}
+
+.ms-slide__text {
+	font-size: 16px;
+	margin-top: 16px;
+
+	@media (max-width: $mobile-l) {
+		margin-top: 8px;
+	}
+}
+
+
+// Стрелки
+.ms-slider__arrows {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	padding: 0 var(--padding-hor);
+}
+
+// Карточка
+.ms-card {
+	padding: 32px;
+
+	&.is-light {
+		color: $light;
+	}
+
+	&.is-dark {
+		color: $text-primary;
+	}
+
+	@media (max-width: $mobile-l) {
+		padding: 24px;
+	}
+}
+
+.ms-card__wrap {
+	display: flex;
+	flex-direction: column;
+}
+
+.ms-card__icon {
+	--size: 56px;
+
+	@include strictSize(var(--size));
+
+	@media (max-width: $tablet) {
+		--size: 32px;
+	}
+}
+
+.ms-card__content {
+	display: flex;
+	flex-direction: column;
+	margin-top: 26px;
+
+	@media (max-width: $tablet) {
+		margin-top: 8px;
+	}
+}
+
+.ms-card__title {
+	font-size: 24px;
+	font-weight: 900;
+	font-style: italic;
+
+	@media (max-width: $tablet) {
+		font-size: 16px;
+		line-height: 1.2;
+	}
+}
+
+.ms-card__text {
+	font-size: 16px;
+	opacity: .7;
+
+	@media (max-width: $tablet) {
+		display: none;
+	}
+}
+
+// Карточки с категориями
+.main-cats {
+	position: relative;
+    z-index: 2;
+    margin-bottom: -120px;
+}
+
+.main-cats__container {
+
+	@media (max-width: $container-width + px) {
+		padding: 0;
+	}
+}
+
+.main-cats__body {
+	display: flex;
+	margin: 0 -16px;
+
+	& > * {
+		margin: 0 16px;
+
+
+		@media (max-width: $container-width + px) {
+
+			&:first-child {
+				padding-left: var(--container-padding);
+			}
+
+			&:last-child {
+				padding-right: var(--container-padding);
+			}
+		}
+
+	}
+}
+

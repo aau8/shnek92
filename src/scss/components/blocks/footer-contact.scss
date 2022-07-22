@@ -1,0 +1,39 @@
+.footer-contact {
+	display: flex;
+	align-items: center;
+}
+
+.footer-contact__icon {
+	@include strictSize(24px);
+	margin-right: 24px;
+
+	& svg {
+		fill: $text-primary;
+	}
+}
+
+.footer-contact__text {
+	font-size: 16px;
+	white-space: nowrap;
+
+	&.is-bold {
+		font-weight: 700;
+		color: $text-second;
+	}
+
+	@media (max-width: $mobile-l) {
+		white-space: initial;
+	}
+}
+
+a.footer-contact__text {
+	@include link;
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			color: var(--color);
+			box-shadow: inset 0 -1px var(--color);
+		}
+	}
+}

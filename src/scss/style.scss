@@ -1,0 +1,149 @@
+@use "sass:math";
+
+// Миксины
+@import "./mixins";
+
+// Шрифты
+// @include font('Gilroy', normal, 400, '../resources/fonts/Gilroy/Gilroy-Regular.woff2');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap');
+
+// Переменные
+// Текст
+$text-primary: #1C2022;
+$text-second: #3C4867;
+$text-label: #8D9ABC;
+$light: #fff;
+$accent: #0A8BF1;
+$accent-second: #E22A2A;
+
+// Задний фон разделов
+// $frame-dark: #080A0A;
+$frame-light: #F1F3F8;
+
+// Обводка
+$border-line: #D7DCEA;
+
+// Радиусы
+$radius-s: 4px;
+$radius-m: 8px;
+
+// Текстовые поля
+$input-placeholder: #8D9ABC;
+
+// Уведомления
+$error: #EB5757;
+
+// ================ Colors End ================
+
+// ================ Responsive Start ================
+$min-width: 320px;
+$max-width: 1920px;
+$max-width-container: 1216;
+$container-padding: 48;
+$container-width: $max-width-container + $container-padding;
+
+:root {
+	--container-padding: #{math.div($container-padding, 2) + 'px'};
+}
+
+$laptop-l: 1500px;
+$laptop: 1100px;
+$tablet: 800px;
+$mobile-l: 450px;
+$mobile-m: 390px;
+$mobile-s: 330px;
+$hide-menu: $tablet;
+// ================ Responsive End ================
+
+:root {
+	--btn-height: 56px;
+
+	@media (max-width: $tablet) {
+		--btn-height: 48px;
+	}
+}
+
+// ================ Other Start ================
+$ff-main: 'Inter', sans-serif;
+$tr: .3s;
+// ================ Other End ================
+//========================================================================================================================================================
+
+// Сброс CSS
+@import "./reset";
+
+body {
+	font-family: $ff-main;
+	font-size: 16px;
+	font-weight: 400;
+	color: $text-primary;
+	line-height: 1.6;
+
+    ._lock & {
+        overflow: hidden;
+		touch-action: none;
+    }
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    & > .content {
+        flex: 1 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/*
+(i) Стили будут применяться ко
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+*/
+[class*="__container"] {
+	max-width: $max-width-container + px;
+	box-sizing: content-box;
+	margin: 0 auto;
+	padding: 0 var(--container-padding);
+}
+
+// Библиотеки
+@import "./libs/swiper";
+// @import "./libs/lightgallery";
+// @import "./libs/rangeslider";
+
+// Базовые стили, шаблоны, заготовки
+@import "./base";
+
+// Общие стили проекта
+@import "./common";
+
+// Компоненты
+@import "./components/blocks/tel";
+@import "./components/blocks/search";
+@import "./components/blocks/footer-contact";
+
+// Карточки
+@import "./components/cards/main-cats";
+@import "./components/cards/top-sales";
+@import "./components/cards/advant";
+
+// Модальные окна
+// @import "./components/modals/";
+
+// Секции
+@import "./sections/header/header";
+@import "./sections/main";
+@import "./sections/top-sales";
+@import "./sections/advant";
+@import "./sections/manuf";
+@import "./sections/page-content";
+@import "./sections/footer";
+
+// Стили для отдельных страниц
+// @import "./pages/";
