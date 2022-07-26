@@ -2449,8 +2449,8 @@ a.b-contact__text:active {
 
 .modal__window:not(.modal.is-initial .modal__window) {
   max-width: none;
-  border-radius: 0;
-  padding: 0;
+  border-radius: 0 !important;
+  padding: 0 !important;
 }
 
 .m-filter__header {
