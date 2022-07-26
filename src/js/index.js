@@ -1,13 +1,35 @@
 import { removeAllClasses, bodyLock, bodyUnlock } from "./utils/functions.js"
-import DismalModules, { acc } from "./utils/modules.js"
-
-import './render.js'
+import DismalModules from "./utils/modules.js"
 
 // Аккордеон
 const accordions = new DismalModules.Accordions()
 
+// Скрыть шапку, если модалка открыта
+const header = document.querySelector('.header')
+const modalElems = document.querySelectorAll('.modal')
+
+modalElems.forEach( modal => {
+
+	modal.addEventListener('modal-open', e => {
+		header.classList.add('is-hide')
+	})
+
+	modal.addEventListener('modal-close', e => {
+		header.classList.remove('is-hide')
+	})
+} )
+
 // Модальные окна
 const modals = new DismalModules.Modals()
+
+// Показать фильтр если размер экрана меньше 800px
+if ( window.innerWidth < 800 ) {
+	const modalFilter = document.querySelector('.m-filter')
+
+	if ( modalFilter ) {
+		modalFilter.classList.remove('is-initial')
+	}
+}
 
 // Табы
 // DismalModules.tabs()
@@ -16,7 +38,7 @@ const modals = new DismalModules.Modals()
 DismalModules.labelTextfield()
 
 // Списки выбора
-// DismalModules.select()
+DismalModules.select()
 
 // Кнопка "Наверх"
 // DismalModules.arrowUp()
@@ -25,7 +47,15 @@ DismalModules.labelTextfield()
 // DismalModules.fixElemOverFooter()
 
 // Только цифры и точка в инпутах
-// DismalModules.onlyDigit()
+DismalModules.onlyDigit()
+
+// Аккордеоны для списков с чекбоксами
+const bFilterElems = document.querySelectorAll('.b-filter.is-checkboxes')
+
+bFilterElems.forEach( bFilter => {
+	const accordionForList = new DismalModules.AccordionForList( bFilter )
+} )
+
 
 // Увеличение изображения при клике по нему. У изображения должен быть атрибут data-zoom
 zoomInImg()
@@ -86,6 +116,10 @@ function zoomInImg() {
     //     })
     // })
 }
+
+import './resetFilter.js'
+
+import './rangeslider.js'
 
 import './DismalMenuItems.js'
 

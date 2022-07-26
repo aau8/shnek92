@@ -243,7 +243,8 @@
 .main-cats__container {
 
 	@media (max-width: $container-width + px) {
-		padding: 0;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 

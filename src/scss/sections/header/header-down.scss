@@ -1,3 +1,13 @@
+.header {
+	transition: $tr;
+
+	&.is-hide {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
+}
+
 .header-down {
 	padding: 24px 0;
 

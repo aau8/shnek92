@@ -1,0 +1,47 @@
+.c-subcat {
+	background: $light;
+	border-radius: $radius-m;
+	padding: 16px;
+	padding-right: 24px;
+	box-shadow: none;
+	transition: $tr;
+
+	&:active {
+
+		& .c-subcat__title {
+			color: $accent;
+		}
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			box-shadow: 0px 16px 32px rgba(141, 154, 188, 0.32);
+
+			& .c-subcat__title {
+				color: $accent;
+			}
+		}
+
+		&:active {
+			box-shadow: none;
+		}
+	}
+}
+
+.c-subcat__wrap {
+	display: flex;
+	align-items: center;
+}
+
+.c-subcat__img {
+	@include strictSize(80px);
+}
+
+.c-subcat__title {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.6;
+	margin-left: 24px;
+	transition: $tr;
+}

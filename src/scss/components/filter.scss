@@ -1,0 +1,168 @@
+@import './blocks/filter';
+
+.m-filter {
+
+	&:not(.m-filter.is-initial) {
+		display: block;
+	}
+
+	@media (max-width: $catalog-hide) {
+		display: none;
+	}
+}
+
+.modal__wrap:not(.modal.is-initial .modal__wrap) {
+	padding: 0;
+}
+
+.modal__window:not(.modal.is-initial .modal__window) {
+	max-width: none;
+	border-radius: 0;
+	padding: 0;
+}
+
+.m-filter__header {
+	display: none;
+	align-items: center;
+	justify-content: space-between;
+	padding: 24px var(--container-padding);
+
+	@media (max-width: $catalog-hide) {
+		display: flex;
+	}
+}
+
+.m-filter__header-content {
+
+}
+
+.m-filter__title {
+	font-size: 26px;
+	font-weight: 900;
+	font-style: italic;
+}
+
+.m-filter__header-tools {
+	display: flex;
+	align-items: center;
+
+	& > * {
+
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
+	}
+}
+
+.filter-btn-mob {
+	width: 24px;
+	height: 24px;
+	@include mask( center/contain no-repeat var(--icon) );
+
+	&.is-reset {
+		--icon: url('@img/sprite.svg#refresh');
+		background: $text-label;
+	}
+
+	&.is-close {
+		--icon: url('@img/sprite.svg#close');
+		background: $text-primary;
+	}
+}
+
+
+.m-filter__wrap {
+
+}
+
+.m-filter__window {
+
+}
+
+.filter {
+	--padding: 32px;
+
+	min-width: 220px;
+	height: fit-content;
+	background: $light;
+	border-radius: $radius-m;
+	overflow: hidden;
+
+	@media (max-width: $catalog-hide) {
+		overflow: initial;
+	}
+}
+
+.filter-btn {
+	--icon: url('@img/sprite.svg#filter');
+	--icon-size: 18px;
+	--icon-color: #{$text-primary};
+	--btn-height: auto;
+
+	display: none;
+	text-transform: none;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 0;
+
+	@include link;
+	--color: #{$text-label};
+
+	&::before {
+		margin-right: 12px;
+	}
+
+	@media (max-width: $catalog-hide) {
+		display: flex;
+	}
+
+	@media (max-width: $mobile-m) {
+		--icon-size: 16px;
+
+		font-size: 14px;
+
+		&::before {
+			margin-right: 8px;
+		}
+	}
+}
+
+.filter__wrap {
+
+	& > .b-filter {
+		border-top: 1px solid $border-filter;
+		border-bottom: 1px solid $border-filter;
+
+		&:first-child {
+			border-top: 0;
+		}
+
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+}
+
+.filter__buttons {
+}
+
+.filter__btn-reset {
+	width: 100%;
+	color: $text-label;
+	margin-top: 16px;
+
+	@media (max-width: $catalog-hide) {
+		display: none;
+	}
+}
+
+.filter__btn-apply {
+	bottom: 0;
+	width: 100%;
+	height: 56px;
+	border-radius: 0;
+
+	@media (max-width: $catalog-hide) {
+		position: sticky;
+	}
+}

@@ -1,0 +1,60 @@
+.checkbox {
+	position: relative;
+	display: block;
+
+	& input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		cursor: pointer;
+
+		&:checked {
+
+			& + span {
+
+				&::before {
+					background: center/contain no-repeat url('data:image/svg+xml,%3Csvg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M16.6668 8.5L10.2502 14.9167L7.3335 12\" stroke=\"%230A8BF1\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/%3E%3C/svg%3E');
+				}
+			}
+		}
+
+		&:active {
+
+			& + span {
+				color: $accent;
+			}
+		}
+
+		@media (any-hover: hover) {
+
+			&:hover {
+
+				& + span {
+					color: $accent;
+				}
+			}
+		}
+	}
+
+	& span {
+		display: block;
+		font-size: 14px;
+		font-weight: 400;
+		transition: $tr;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			border-radius: $radius-s;
+			border: 1px solid $border-line;
+			background: none;
+			vertical-align: middle;
+			margin-right: 16px;
+		}
+	}
+}

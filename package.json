@@ -4,7 +4,7 @@
     "description": "",
     "main": "gulpfile.js",
     "scripts": {
-        "start": "gulp",
+        "dev": "gulp",
         "prod": "gulp prodCopyImages --production",
         "prod-ci": "gulp prod --production",
         "convert-images": "gulp convertImages",
@@ -45,6 +45,8 @@
     "type": "module",
     "private": true,
     "dependencies": {
-        "swiper": "^8.3.1"
+        "nouislider": "^15.6.0",
+        "swiper": "^8.3.1",
+        "wnumb": "^1.2.0"
     }
 }

@@ -22,6 +22,7 @@ $frame-light: #F1F3F8;
 
 // Обводка
 $border-line: #D7DCEA;
+$border-filter: #F1F3F8;
 
 // Радиусы
 $radius-s: 4px;
@@ -54,6 +55,7 @@ $mobile-l: 450px;
 $mobile-m: 390px;
 $mobile-s: 330px;
 $hide-menu: $tablet;
+$catalog-hide: $tablet;
 // ================ Responsive End ================
 
 :root {
@@ -114,12 +116,16 @@ body {
 	box-sizing: content-box;
 	margin: 0 auto;
 	padding: 0 var(--container-padding);
+
+	@media (max-width: $mobile-m) {
+		--container-padding: 16px;
+	}
 }
 
 // Библиотеки
 @import "./libs/swiper";
 // @import "./libs/lightgallery";
-// @import "./libs/rangeslider";
+@import "./libs/rangeslider";
 
 // Базовые стили, шаблоны, заготовки
 @import "./base";
@@ -132,12 +138,15 @@ body {
 @import "./components/blocks/search";
 @import "./components/blocks/contact";
 @import "./components/breadcrumbs";
+@import "./components/pagin";
 @import "./components/page-header";
+@import "./components/filter";
 
 // Карточки
 @import "./components/cards/main-cats";
 @import "./components/cards/top-sales";
 @import "./components/cards/advant";
+@import "./components/cards/subcat";
 
 // Модальные окна
 @import "./components/modals/search";
@@ -151,7 +160,9 @@ body {
 @import "./sections/advant";
 @import "./sections/manuf";
 @import "./sections/page-content";
+@import "./sections/subcat";
 @import "./sections/footer";
 
 // Стили для отдельных страниц
 @import "./pages/contacts";
+@import "./pages/catalog";

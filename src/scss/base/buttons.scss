@@ -36,7 +36,7 @@
 			-webkit-mask: center/contain no-repeat var(--icon);
 			mask: center/contain no-repeat var(--icon);
 			vertical-align: middle;
-			background: var(--icon-color);
+			background: var(--icon-color, #000);
 			transition: $tr;
 		}
 	}

@@ -594,17 +594,23 @@ class AccordionForList {
 
 	constructor(acc) {
 		this.acc = acc
-		this.list = acc.querySelector('.acc-category__block-list')
-		this.itemArr = Array.from(this.list.querySelectorAll('li'))
-		this.btnMore = acc.querySelector('.acc-category__block-more')
-		this.contentExternal = acc.closest('.acc-category__content')
+		this.list = acc.querySelector('.b-filter__body')
+		this.itemArr = Array.from(this.list.querySelectorAll('.b-filter__checkbox'))
+		this.btnMore = acc.querySelector('.b-filter__more')
+		this.showItemsNum = acc.dataset.showItems
+		this.isNotNeedHide = this.showItemsNum == this.itemArr.length
 
 		this._init()
 	}
 
 	_init() {
-		this.firstSixItemsHeight = this.itemArr.slice(0, 6).reduce( (accum, e) => accum + e.offsetHeight , 0)
-		this.listHeight = this.itemArr.reduce( (accum, e) => accum + e.offsetHeight , 0)
+		if ( !this.isNotNeedHide ) this.acc.classList.add('is-inited')
+
+		const firstItems = this.itemArr.slice(0, this.showItemsNum)
+
+		this.itemsHeight = firstItems.reduce( (accum, e) => accum + e.offsetHeight, 0) - parseInt(window.getComputedStyle( firstItems[firstItems.length - 1] ).getPropertyValue('padding-bottom')) + 1
+		this.listHeight = this.itemArr.reduce( (accum, e) => accum + e.offsetHeight, 0) + 1
+
 		this.close()
 
 		this.btnMore.addEventListener('click', e => {
@@ -625,9 +631,9 @@ class AccordionForList {
 	}
 
 	close() {
-		this.list.style.maxHeight = this.firstSixItemsHeight + 'px'
+		this.list.style.maxHeight = this.itemsHeight + 'px'
 		this.acc.classList.remove('is-open')
-		this.btnMore.innerText = 'Показать еще'
+		this.btnMore.innerText = 'Показать все'
 	}
 }
 
@@ -757,4 +763,5 @@ export default {
     arrowUp,
     fixElemOverFooter,
     onlyDigit,
+	AccordionForList,
 }
