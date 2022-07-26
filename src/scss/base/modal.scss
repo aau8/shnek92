@@ -55,7 +55,7 @@
 
 .modal__window {
 
-	&:not(.modal.is-initial .modal__window) {
+	&:not(.modal.is-initial  .modal__window) {
 		position: relative;
 		max-width: 490px;
 		width: 100%;
