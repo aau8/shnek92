@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+        @@include('tpls/header.html',{})
+
+		<div class="content">
+			<div class="section is-fill have-margin-null product">
+				<div class="product__container">
+					<div class="product-slider product-block">
+						<div class="product-slider__track">
+							<div class="swiper-container" data-swiper="product-track">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><div class="product-slider__track-slide"><img src="@img/products/1/1.png" alt=""></div></div>
+									<div class="swiper-slide"><div class="product-slider__track-slide"><img src="@img/products/1/2.png" alt=""></div></div>
+									<div class="swiper-slide"><div class="product-slider__track-slide"><img src="@img/products/1/3.png" alt=""></div></div>
+									<div class="swiper-slide"><div class="product-slider__track-slide"><img src="@img/products/1/3.png" alt=""></div></div>
+									<div class="swiper-slide"><div class="product-slider__track-slide"><img src="@img/products/1/3.png" alt=""></div></div>
+									<div class="swiper-slide"><div class="product-slider__track-slide"><img src="@img/products/1/3.png" alt=""></div></div>
+									<div class="swiper-slide"><div class="product-slider__track-slide"><img src="@img/products/1/3.png" alt=""></div></div>
+									<div class="swiper-slide"><div class="product-slider__track-slide"><img src="@img/products/1/3.png" alt=""></div></div>
+								</div>
+							</div>
+						</div>
+						<div class="product-slider__main">
+							<div class="swiper-container" data-swiper="product-main">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide product-slider__main-slide"><img src="@img/products/1/1.png" alt=""></div>
+									<div class="swiper-slide product-slider__main-slide"><img src="@img/products/1/2.png" alt=""></div>
+									<div class="swiper-slide product-slider__main-slide"><img src="@img/products/1/3.png" alt=""></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="product-content product-block">
+						<div class="page-header product-content__header">
+							<div class="breadcrumbs">
+								<ul class="breadcrumbs__list">
+									<li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
+									<li class="breadcrumbs__item">Каталог</li>
+								</ul>
+							</div>
+							<div class="page-header__container">
+								<div class="page-header__content">
+									<h1 class="page-header__title">Штукатурная станция Serta Master XL</h1>
+								</div>
+							</div>
+						</div>
+						<div class="product-content__body">
+							<ul class="product-content__list">
+								<li class="product-content__list-item">Производитель: <span>Serta Master</span></li>
+								<li class="product-content__list-item">Артикул: <span>3212</span></li>
+							</ul>
+						</div>
+						<div class="product-content__footer">
+							<div class="product-content__price">
+								<span class="product-content__price-title">Цена</span>
+								<div class="product-content__price-content">
+									<div class="product-content__price-block">
+										<span class="product-content__price-old">800 000 ₽</span>
+										<span class="product-content__price-current">400 000 ₽</span>
+									</div>
+									<div class="product-content__price-available is-available">В наличии</div>
+								</div>
+							</div>
+							<button class="btn is-accent product-content__order">Заказать</button>
+						</div>
+					</div>
+				</div>
+				<div class="section product-descr">
+					<div class="product-descr__container">
+						<div class="product-descr__wrap">
+							<div class="pd-block">
+								<span class="pd-block__title">Описание</span>
+								<div class="pd-block__body">
+									<p>
+										Предлагаемый нами широкий ассортимент и приемлемые цены поразят даже самых взыскательных и экономных клиентов. У нас представлено более 100 наименований практичного и уникального оборудования для проведения штукатурных работ,  от ведущих мировых и отечественных фирм-производителей.
+										<br><br>
+										Среди представленных нами товаров, вы обязательно найдете штукатурные станции, растворонасосы, установки для торкрета и все комплектующие и расходники к ним, а также профессиональный ручной инструмент для штукатурных работ.
+									</p>
+								</div>
+							</div>
+							<div class="pd-block">
+								<span class="pd-block__title">Характеристики</span>
+								<div class="pd-block__body">
+									<table class="pd-block__table">
+										<tr>
+											<td>Страна изготовления	Россия</td>
+											<td>Напряжение	220В/380В</td>
+										</tr>
+										<tr>
+											<td>Шнековая пара в комплекте</td>
+											<td>D6-3</td>
+										</tr>
+										<tr>
+											<td>Мощность двигателя</td>
+											<td>4 КВт</td>
+										</tr>
+										<tr>
+											<td>Дальность подачи</td>
+											<td>до 20м</td>
+										</tr>
+										<tr>
+											<td>Объем бункера</td>
+											<td>70л</td>
+										</tr>
+										<tr>
+											<td>Габариты (ДхШхВ),см</td>
+											<td>125x65x141</td>
+										</tr>
+										<tr>
+											<td>Масса, кг</td>
+											<td>186</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section product-video">
+					<div class="product-video__container">
+						<div class="product-video__block">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/5yx6BWlEVcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<div class="product-video__block">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/5yx6BWlEVcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+				<section class="section is-fill s-advant on-catalog">
+					<div class="s-advant__container">
+						<div class="s-advant__body">
+							<ol class="s-advant__list">
+								<li class="s-advant__text">Штукатурные станции в наличии</li>
+								<li class="s-advant__text">Увеличенная гарантия — 2 года</li>
+								<li class="s-advant__text">Бесплатная доставка до объекта</li>
+								<li class="s-advant__text">Скидка 15% на профессиональный ручной инструмент при покупке станции</li>
+								<li class="s-advant__text">Возможность покупки в кредит и лизинг без первоначального взноса</li>
+								<li class="s-advant__text">Сопровождение и поддержка даже после завершения гарантии</li>
+							</ol>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+
+        @@include('tpls/footer.html',{})
+	</div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/bundle.min.js"></script>
+</body>
+</html>

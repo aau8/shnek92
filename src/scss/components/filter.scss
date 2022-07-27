@@ -1,25 +1,46 @@
 @import './blocks/filter';
 
 .m-filter {
+	min-width: 220px;
 
-	&:not(.m-filter.is-initial) {
-		display: block;
+	@media (min-width: 801px) {
+		position: initial;
+		top: auto;
+		left: auto;
+		width: auto;
+		height: auto;
+		background: none;
+		overflow: hidden;
+		visibility: visible;
+		opacity: 1;
+		transition: $tr;
+
+		& .modal__wrap {
+			min-height: auto;
+			padding: 0;
+		}
+
+		& .modal__window {
+			position: initial;
+			transform: none;
+			padding: 0;
+		}
 	}
 
-	@media (max-width: $catalog-hide) {
-		display: none;
+	@media (max-width: $tablet) {
+
+		& .modal__wrap {
+			padding: 0;
+		}
+
+		& .modal__window {
+			max-width: none;
+			border-radius: 0;
+			padding: 0;
+		}
 	}
 }
 
-.modal__wrap:not(.modal.is-initial .modal__wrap) {
-	padding: 0;
-}
-
-.modal__window:not(.modal.is-initial .modal__window) {
-	max-width: none;
-	border-radius: 0 !important;
-	padding: 0 !important;
-}
 
 .m-filter__header {
 	display: none;
@@ -82,11 +103,14 @@
 .filter {
 	--padding: 32px;
 
-	min-width: 220px;
 	height: fit-content;
 	background: $light;
 	border-radius: $radius-m;
 	overflow: hidden;
+
+	@media (max-width: $laptop) {
+		--padding: 24px;
+	}
 
 	@media (max-width: $catalog-hide) {
 		overflow: initial;

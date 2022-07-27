@@ -44,5 +44,6 @@
 
 	& a {
 		@include link;
+		--color: #{$text-label};
 	}
 }

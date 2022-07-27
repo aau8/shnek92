@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination, EffectFade } from "swiper";
+import Swiper, { Navigation, Pagination, EffectFade, Thumbs, FreeMode } from "swiper";
 
 const mainServicesSwiper = new Swiper('[data-swiper=main-services]', {
     modules: [ Navigation, Pagination, EffectFade ],
@@ -56,4 +56,53 @@ const sectionManufSwiper = new Swiper('[data-swiper=s-manuf]', {
         nextEl: ".s-manuf-slider__arrow.is-next",
         prevEl: ".s-manuf-slider__arrow.is-prev",
     },
+});
+
+const productMainSwiper = new Swiper('[data-swiper=product-main]', {
+	modules: [ EffectFade ],
+
+	effect: 'fade',
+
+	slidesPerView: 1,
+	spaceBetween: 0,
+	direction: 'vertical',
+	allowTouchMove: false,
+});
+
+const productTrackSwiper = new Swiper('[data-swiper=product-track]', {
+	modules: [ Thumbs, FreeMode ],
+
+	breakpoints: {
+		450: {
+			slidesPerView: 5,
+			spaceBetween: 16,
+			slideToClickedSlide: true,
+			watchSlidesProgress: true,
+			// freeMode: true,
+			loop: true,
+			direction: 'vertical',
+		},
+		370: {
+			slidesPerView: 5,
+			spaceBetween: 12,
+			slideToClickedSlide: true,
+			watchSlidesProgress: true,
+			// freeMode: true,
+			loop: true,
+			direction: 'horizontal',
+		},
+		0: {
+			slidesPerView: 4,
+			spaceBetween: 12,
+			slideToClickedSlide: true,
+			watchSlidesProgress: true,
+			// freeMode: true,
+			loop: true,
+			direction: 'horizontal',
+		},
+	},
+
+	thumbs: {
+		swiper: productMainSwiper,
+	},
 });
