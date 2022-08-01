@@ -3347,7 +3347,8 @@ a.b-contact__text:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 -16px;
+  padding: 42px 0;
+  margin: -42px -16px;
 }
 
 .top-sales__body > * {
@@ -4379,7 +4380,7 @@ a.b-contact__text:active {
   }
 
   .top-sales__body {
-    margin: 0 -8px;
+    margin: -42px -8px;
   }
 
   .top-sales__body > * {
@@ -4617,7 +4618,7 @@ a.b-contact__text:active {
   }
 
   .top-sales__body {
-    margin: 0 -4px;
+    margin: -42px -4px;
   }
 
   .top-sales__body > * {

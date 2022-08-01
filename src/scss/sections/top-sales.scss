@@ -22,14 +22,15 @@
 
 .top-sales__body {
 	display: flex;
-	margin: 0 -16px;
+    padding: 42px 0;
+    margin: -42px -16px;
 
 	@media (max-width: $tablet) {
-		margin: 0 -8px;
+		margin: -42px -8px;
 	}
 
 	@media (max-width: $mobile-l) {
-		margin: 0 -4px;
+		margin: -42px -4px;
 	}
 
 	& > * {
